@@ -1,10 +1,10 @@
-import adafruit_mcp4725
 import time
 import board
 import busio
+import adafruit_mcp4725
 
 i2c = busio.I2C(board.SCL, board.SDA)
-dac = adafruit_mcp4725,MCP4725(i2c, address=0x60)
+dac = adafruit_mcp4725.MCP4725(i2c, address=0x48)
 
 while True:
     for i in range(0,4095):
